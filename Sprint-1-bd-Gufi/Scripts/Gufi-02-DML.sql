@@ -3,7 +3,7 @@ CREATE DATABASE Gufi_DML;
 USE Gufi_DDL;
 
 INSERT INTO TipoUsuario(TituloTipoUsuario)
-VALUES ('Administraor'),('Comum');
+VALUES ('Administrador'),('Comum');
 
 INSERT INTO TipoEvento(TituloTipoEvento)
 VALUES ('C#'),('JavaScript'),('HTML5'),('DataBase');
@@ -28,3 +28,10 @@ VALUES	('PRESENTE',2,3),
 		('PRESENTE',1,2),
 		('AUSENTE',4,4),
 		('PRESENTE',3,1);
+
+INSERT INTO Usuario(NomeUsuario,Email,Senha,Genero,DataNascimento,TipoUsuario)
+VALUES	('Matheus','Matheus@hotmail.com','matheus1234','Masculino','17/10/2005',2),
+		('Gabriel','Gabriel@hotmail.com','Gabriel1234','Masculino','17/10/2005',1),
+		('Fernando','Fernando@hotmail.com','Fernando','Masculino','17/10/2005',2),
+		('Giovanne','Giovanne@hotmail.com','Giovanne1234','Masculino','17/10/2005',1),
+		
