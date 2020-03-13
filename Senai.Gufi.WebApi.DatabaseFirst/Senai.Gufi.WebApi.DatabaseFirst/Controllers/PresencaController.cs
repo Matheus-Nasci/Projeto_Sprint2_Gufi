@@ -8,52 +8,52 @@ using Senai.Gufi.WebApi.DatabaseFirst.Domains;
 using Senai.Gufi.WebApi.DatabaseFirst.Interfaces;
 using Senai.Gufi.WebApi.DatabaseFirst.Repositories;
 
-namespace Senai.Gufi.WebApi.Controllers
+namespace Senai.Gufi.WebApi.DatabaseFirst.Controllers
 {
     [Produces("application/json")]
 
     [Route("api/[controller]")]
 
     [ApiController]
-    public class TiposEventoController : ControllerBase
+    public class PresencaController : ControllerBase
     {
-        private ITipoEventoRepository _tipoEventoRepository;
+        private IPresencaRepository _presencaRepository;
 
-        public TiposEventoController()
+        public PresencaController()
         {
-            _tipoEventoRepository = new TipoEventoRepository();
+            _presencaRepository = new PresencaRepository();
         }
 
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_tipoEventoRepository.Listar());
+            return Ok(_presencaRepository.Listar());
         }
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            return StatusCode(200, _tipoEventoRepository.BuscarPorId(id));
+            return Ok(_presencaRepository.BuscarPorId(id));
         }
 
         [HttpPost]
-        public IActionResult Post(TipoEvento novoTipoEvento)
+        public IActionResult Cadastrar(Presenca novaPresenca)
         {
-            _tipoEventoRepository.Cadastrar(novoTipoEvento);
+            _presencaRepository.Cadastrar(novaPresenca);
 
             return StatusCode(201);
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, TipoEvento tipoEventoAtualizado)
+        public IActionResult Put(int id, Presenca presencaAtualizada)
         {
-            TipoEvento tipoEventoBuscado = _tipoEventoRepository.BuscarPorId(id);
+            Presenca presencaBuscada = _presencaRepository.BuscarPorId(id);
 
-            if (tipoEventoBuscado != null)
+            if (presencaBuscada != null)
             {
                 try
                 {
-                    _tipoEventoRepository.Atualizar(id, tipoEventoAtualizado);
+                    _presencaRepository.Atualizar(id, presencaAtualizada);
 
                     return StatusCode(200);
                 }
@@ -69,14 +69,14 @@ namespace Senai.Gufi.WebApi.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            TipoEvento tipoEventoBuscado = _tipoEventoRepository.BuscarPorId(id);
+            Presenca presencaBuscada = _presencaRepository.BuscarPorId(id);
 
-            if (tipoEventoBuscado == null)
+            if (presencaBuscada == null)
             {
                 return NotFound();
             }
 
-            _tipoEventoRepository.Deletar(id);
+            _presencaRepository.Deletar(id);
 
             return StatusCode(202);
         }
