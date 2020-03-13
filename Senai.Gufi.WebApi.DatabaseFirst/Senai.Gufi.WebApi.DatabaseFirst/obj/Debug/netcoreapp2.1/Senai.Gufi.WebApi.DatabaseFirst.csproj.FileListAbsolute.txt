@@ -26,3 +26,5 @@ C:\Users\Matheus Nascimento\Desktop\Projeto_Sprint2_Gufi\Senai.Gufi.WebApi.Datab
 C:\Users\Matheus Nascimento\Desktop\Projeto_Sprint2_Gufi\Senai.Gufi.WebApi.DatabaseFirst\Senai.Gufi.WebApi.DatabaseFirst\obj\Debug\netcoreapp2.1\Senai.Gufi.WebApi.DatabaseFirst.RazorTargetAssemblyInfo.cache
 C:\Users\Matheus Nascimento\Desktop\Projeto_Sprint2_Gufi\Senai.Gufi.WebApi.DatabaseFirst\Senai.Gufi.WebApi.DatabaseFirst\obj\Debug\netcoreapp2.1\Senai.Gufi.WebApi.DatabaseFirst.dll
 C:\Users\Matheus Nascimento\Desktop\Projeto_Sprint2_Gufi\Senai.Gufi.WebApi.DatabaseFirst\Senai.Gufi.WebApi.DatabaseFirst\obj\Debug\netcoreapp2.1\Senai.Gufi.WebApi.DatabaseFirst.pdb
+C:\Users\44337427830\Desktop\Projeto_Sprint2_Gufi\Senai.Gufi.WebApi.DatabaseFirst\Senai.Gufi.WebApi.DatabaseFirst\bin\Debug\netcoreapp2.1\Senai.Gufi.WebApi.DatabaseFirst.xml
+C:\Users\44337427830\Desktop\Projeto_Sprint2_Gufi\Senai.Gufi.WebApi.DatabaseFirst\Senai.Gufi.WebApi.DatabaseFirst\obj\Debug\netcoreapp2.1\Senai.Gufi.WebApi.DatabaseFirst.xml

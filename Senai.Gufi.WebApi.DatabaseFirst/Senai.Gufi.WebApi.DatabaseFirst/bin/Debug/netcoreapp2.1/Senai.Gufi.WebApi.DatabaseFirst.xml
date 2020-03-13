@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Senai.Gufi.WebApi.DatabaseFirst</name>
+    </assembly>
+    <members>
+        <member name="M:Senai.Gufi.WebApi.DatabaseFirst.Controllers.EventoController.Get">
+            <summary>
+            Trás a lista de Eventos 
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

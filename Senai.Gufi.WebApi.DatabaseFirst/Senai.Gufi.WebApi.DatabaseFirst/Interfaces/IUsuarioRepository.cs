@@ -17,5 +17,7 @@ namespace Senai.Gufi.WebApi.DatabaseFirst
         void Deletar(int id);
 
         Usuario BuscarPorId(int id);
+
+        Usuario BuscarPorEmailSenha(string email, string senha);
     }
 }

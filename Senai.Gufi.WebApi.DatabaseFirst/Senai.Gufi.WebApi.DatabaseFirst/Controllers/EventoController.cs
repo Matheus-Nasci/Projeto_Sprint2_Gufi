@@ -24,19 +24,29 @@ namespace Senai.Gufi.WebApi.DatabaseFirst.Controllers
             _eventoRepository = new EventoRepository();
         }
 
+        /// <summary>
+        /// Trás a lista de Eventos 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Get()
         {
             return Ok(_eventoRepository.Listar());
         }
 
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetById(int id)
         {
             return StatusCode(200, _eventoRepository.BuscarPorId(id));
         }
 
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult Post(Evento novoEvento)
         {
             _eventoRepository.Cadastrar(novoEvento);
@@ -45,6 +55,8 @@ namespace Senai.Gufi.WebApi.DatabaseFirst.Controllers
         }
 
         [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Put(int id, Evento eventoAtualizado)
         {
             Evento eventoBuscado = _eventoRepository.BuscarPorId(id);
@@ -67,6 +79,8 @@ namespace Senai.Gufi.WebApi.DatabaseFirst.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status202Accepted)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Delete(int id)
         {
             Evento eventoBuscado = _eventoRepository.BuscarPorId(id);

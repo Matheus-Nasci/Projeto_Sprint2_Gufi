@@ -53,5 +53,10 @@ namespace Senai.Gufi.WebApi.DatabaseFirst.Repositories
         {
             return ctx.Usuario.ToList();
         }
+
+        public Usuario BuscarPorEmailSenha(string email, string senha)
+        {
+            return ctx.Usuario.FirstOrDefault(u => u.Email == email && u.Senha == senha);
+        }
     }
 }
